@@ -1,11 +1,11 @@
 # Dito Challenge
 
-Desafio realizado como etapa do processo seletivo da Dito. O projeto foi concretizado utilizando-se das frameworks Django e Django Rest sobre Python 3
+Desafio realizado como etapa do processo seletivo da Dito. O projeto foi concretizado utilizando-se das frameworks **Django** e **Django Rest Framework** sobre **Python 3**
 
 ## Iniciando
 ### Pré-Requisitos
 
-Para rodar o projeto é necessário ter o **Python 3** instalado na máquina junto com o **pip**
+Para rodar o projeto é necessário ter o **Python 3** instalado na máquina junto com o **pip**  
 Pode ser encontrado em https://www.python.org/downloads/
 
 ### Instalação
