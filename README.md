@@ -6,7 +6,8 @@ Desafio realizado como etapa do processo seletivo da Dito. O projeto foi concret
 ### Pré-Requisitos
 
 Para rodar o projeto é necessário ter o **Python 3** instalado na máquina junto com o **pip**  
-Pode ser encontrado em https://www.python.org/downloads/
+Pode ser encontrado em https://www.python.org/downloads/  
+(Lembre-se de adicionar o Python ao PATH)
 
 ### Instalação
 
