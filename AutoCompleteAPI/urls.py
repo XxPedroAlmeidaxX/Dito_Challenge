@@ -1,11 +1,13 @@
-from rest_framework import routers
-from .views import UserViewSet, EventDataViewSet
 from django.urls import path, include
+from rest_framework import routers
+from . import views
+
 
 router = routers.DefaultRouter()
-router.register(r'/users', UserViewSet)
-router.register(r'/eventsData', EventDataViewSet)
+router.register(r'users', views.UserViewSet)
+router.register(r'eventsData', views.EventDataViewSet)
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+    path('autocomplete/', views.Autocomplete.as_view())
 ]
