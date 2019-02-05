@@ -20,8 +20,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'AutoCompleteAPI',
+    'autocomplete_api',
     'rest_framework',
+    'rest_framework_swagger'
 ]
 
 MIDDLEWARE = [

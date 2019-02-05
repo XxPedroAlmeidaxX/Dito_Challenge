@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class AutoCompleteApiConfig(AppConfig):
-    name = 'AutoCompleteAPI'
+    name = 'autocomplete_api'
