@@ -29,6 +29,7 @@ pip install django
 pip install djangorestframework
 pip install markdown
 pip install django-filter
+pip install django-rest-swagger
 ```
 ### Execução
 
@@ -37,7 +38,7 @@ Para rodar as APIs
 ```
 python manage.py runserver
 ```
-A aplicação ficará disponível para consumo no endereço default http://localhost:8000
+A API do **Autocomplete** pode ser acessada com o Swagger através do endereço http://localhost:8000/autocomplete/api/swagger
 
 ## Autor
 
