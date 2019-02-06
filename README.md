@@ -31,6 +31,7 @@ pip install markdown
 pip install django-filter
 pip install django-rest-swagger
 ```
+
 ### Execução
 
 Para rodar as APIs
@@ -38,7 +39,9 @@ Para rodar as APIs
 ```
 python manage.py runserver
 ```
-A API do **Autocomplete** pode ser acessada com o Swagger através do endereço http://localhost:8000/autocomplete/api/swagger
+A API do **Autocomplete** pode ser acessada com o Swagger através do endereço: http://localhost:8000/autocomplete/api/swagger  
+
+Já a API do **Data Treat** pode ser acessada com o Swagger através do endereço: http://localhost:8000/data-treat/api/swagger
 
 ## Autor
 
