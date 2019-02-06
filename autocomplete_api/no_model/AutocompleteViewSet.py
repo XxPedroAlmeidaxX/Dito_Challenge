@@ -14,13 +14,13 @@ class AutocompleteFilterBackend(BaseFilterBackend):
                 name='event',
                 location='query',
                 required=True,
-                description='String utilizada para completar os eventos'
+                description='String used to complete the events'
             ),
             coreapi.Field(
                 name='limit',
                 location='query',
                 required=False,
-                description='Quantidade de eventos a serem sugeridos. Default: 5'
+                description='Number of events to be suggested. Default: 5'
             ),
         ]
 
