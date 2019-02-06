@@ -1,6 +1,11 @@
 # Dito Challenge
 
-Desafio realizado como etapa do processo seletivo da Dito. O projeto foi concretizado utilizando-se das frameworks **Django** e **Django Rest Framework** sobre **Python 3**
+Desafio realizado como etapa do processo seletivo da Dito. O projeto foi concretizado utilizando-se das frameworks
+**Django** e **Django Rest Framework** sobre **Python 3**  
+  
+Foram escolhidas essas tecnologias por conta da praticidade que fornecem para o desenvolvimento e publicação. O
+Django possui extenso suporte em soluções cloud, como no App Engine do GCP ou Heroku por exemplo, sendo considerado um
+sinônimo de escalabilidade.  
 
 ## Iniciando
 ### Pré-Requisitos
@@ -39,9 +44,11 @@ Para rodar as APIs
 ```
 python manage.py runserver
 ```
-A API do **Autocomplete** pode ser acessada com o Swagger através do endereço: http://localhost:8000/autocomplete/api/swagger  
+A API do **Autocomplete** pode ser acessada com o Swagger através do endereço:  
+http://localhost:8000/autocomplete/api/swagger  
 
-Já a API do **Data Treat** pode ser acessada com o Swagger através do endereço: http://localhost:8000/data-treat/api/swagger
+Já a API do **Data Treat** pode ser acessada com o Swagger através do endereço:  
+http://localhost:8000/data-treat/api/swagger
 
 ## Autor
 
