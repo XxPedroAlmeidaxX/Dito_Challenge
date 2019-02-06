@@ -27,6 +27,10 @@ class AutocompleteFilterBackend(BaseFilterBackend):
 
 # Creates the Autocomplete service
 class AutocompleteViewSet(viewsets.ViewSet):
+    """
+       Tries to find an event inserted on Event Data that completes the string passed. If the amount of returns is
+       superior to the 'limit' the most used events are retrieve
+    """
 
     limit_default_value = 5
 

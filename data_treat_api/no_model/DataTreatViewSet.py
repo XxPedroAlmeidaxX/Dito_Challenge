@@ -8,6 +8,10 @@ class DataTreatViewSet(viewsets.ViewSet):
 
     # Defines the GET behavior
     def list(self, request):
+        """
+           Accesses the endpoint https://storage.googleapis.com/dito-questions/events.json and manipulates the events to
+           return a merged and sorted version
+        """
 
         endpoint_url = 'https://storage.googleapis.com/dito-questions/events.json'
         request_result = requests.get(url=endpoint_url)
