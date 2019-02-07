@@ -1,6 +1,7 @@
 import requests
 from rest_framework import viewsets, status
 from rest_framework.response import Response
+from .DataTreatEndpoint import DataTreatEndpointFactory
 
 
 # Creates the Data Treat service
@@ -13,8 +14,7 @@ class DataTreatViewSet(viewsets.ViewSet):
            return a merged and sorted version
         """
 
-        endpoint_url = 'https://storage.googleapis.com/dito-questions/events.json'
-        request_result = requests.get(url=endpoint_url)
+        request_result = DataTreatEndpointFactory.get().result()
 
         if request_result.status_code == requests.codes.ok:
             return Response(get_treated_events(request_result.json()['events']))
@@ -59,7 +59,7 @@ def get_treated_events(events):
         })
 
     # Sort the timeline by timestamp and return it
-    return {"timeline": [sorted(timeline, key=lambda x: x['timestamp'], reverse=True)]}
+    return {"timeline": sorted(timeline, key=lambda x: x['timestamp'], reverse=True)}
 
 
 # Returns the target_key's value inside custom_data from a event
