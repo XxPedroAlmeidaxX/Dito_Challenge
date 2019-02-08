@@ -2,6 +2,7 @@ import coreapi
 from rest_framework import viewsets, status
 from rest_framework.filters import BaseFilterBackend
 from rest_framework.response import Response
+from django.db.models import Count
 
 from autocomplete_api.models import EventData
 
@@ -34,11 +35,6 @@ class AutocompleteViewSet(viewsets.ViewSet):
 
     limit_default_value = 5
 
-    # id must be included in raw query - Django requirement -
-    event_raw_query = ("SELECT id, event FROM autocomplete_api_eventdata " +
-                       "WHERE event LIKE '{event_part}%' " +
-                       "GROUP BY event ORDER BY count(id) DESC LIMIT {limit} ")
-
     # Apply the custom Query String Parameters
     filter_backends = (AutocompleteFilterBackend,)
 
@@ -51,15 +47,15 @@ class AutocompleteViewSet(viewsets.ViewSet):
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
         limit = request.GET.get('limit')
-        if limit is None:
-            limit = self.limit_default_value
+        limit = self.limit_default_value if limit is None else int(limit)
 
-        # Executes the raw query
-        events = EventData.objects.raw(self.event_raw_query.format(event_part=event_part, limit=limit))
-
+        # Gets the most repeated events that starts with the event_part sliced by the passed limit 
+        events = EventData.objects.values('event').filter(event__startswith=event_part).annotate(num_events=Count('event')).order_by('-num_events')[:limit]
+ 
         # Creates events list to be returned
         events_return = list()
         for row in events:
-            events_return.append(getattr(row, 'event'))
+            events_return.append(row['event'])
 
         return Response(events_return)
+
