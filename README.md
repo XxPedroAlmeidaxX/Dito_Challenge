@@ -50,6 +50,14 @@ http://localhost:8000/autocomplete/api/swagger
 Já a API do **Data Treat** pode ser acessada com o Swagger através do endereço:  
 http://localhost:8000/data-treat/api/swagger
 
+### Testes
+
+Para rodar os Testes
+
+```
+python manage.py test
+```
+
 ## Autor
 
 **Pedro Henrique de Almeida Costa**
