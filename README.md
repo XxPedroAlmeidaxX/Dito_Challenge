@@ -8,8 +8,8 @@ Django possui extenso suporte em soluções cloud, como no App Engine do GCP ou 
 sinônimo de escalabilidade.  
 
 A publicação da aplicação pode ser acessada através dos links:  
-**Autocomplete API: ** https://dito-challenge.herokuapp.com/autocomplete/api/swagger
-**Data Treat API: ** https://dito-challenge.herokuapp.com/data-treat/api/swagger
+**Autocomplete API:** https://dito-challenge.herokuapp.com/autocomplete/api/swagger  
+**Data Treat API:** https://dito-challenge.herokuapp.com/data-treat/api/swagger
 
 ## Iniciando
 ### Pré-Requisitos
