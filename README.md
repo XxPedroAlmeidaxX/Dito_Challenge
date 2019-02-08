@@ -7,6 +7,10 @@ Foram escolhidas essas tecnologias por conta da praticidade que fornecem para o 
 Django possui extenso suporte em soluções cloud, como no App Engine do GCP ou Heroku por exemplo, sendo considerado um
 sinônimo de escalabilidade.  
 
+A publicação da aplicação pode ser acessada através dos links:  
+**Autocomplete API: ** https://dito-challenge.herokuapp.com/autocomplete/api/swagger
+**Data Treat API: ** https://dito-challenge.herokuapp.com/data-treat/api/swagger
+
 ## Iniciando
 ### Pré-Requisitos
 
@@ -50,7 +54,7 @@ http://localhost:8000/autocomplete/api/swagger
 Já a API do **Data Treat** pode ser acessada com o Swagger através do endereço:  
 http://localhost:8000/data-treat/api/swagger
 
-### Testes
+### Testes Automatizados
 
 Para rodar os Testes
 
